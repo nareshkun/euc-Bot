@@ -98,7 +98,7 @@ var sb_connection = conf.service_bus
 var serviceBusService = azure.createServiceBusService(sb_connection);
 serviceBusService.createQueueIfNotExists('send-to-bot', function(error){
     if(error){
-        console.log("exitted")
+        console.log("Failed to Crete Queue")
         process.exit(1)
     }
 });
